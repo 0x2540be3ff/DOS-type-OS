@@ -1,0 +1,11 @@
+------------------------------------------------------------
+USERS /DIR = Shows all registered users.
+QUIT = Exits the program.
+USERS.REG /GUI = Opens the registration GUI.
+LOGOFF = Logs you off.
+RESTART = Restarts the system.
+IMPORT THIS = :)
+ROOT.run /TERMINAL = Starts the terminal with ROOT user.
+CLEAR = Clears the screen.
+HELP = Opens this window.
+------------------------------------------------------------
