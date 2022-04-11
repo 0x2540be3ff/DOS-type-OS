@@ -1,5 +1,5 @@
 # terminal.py
-import os; import time; import importlib; import string; import datetime; import re
+import os; import time; import importlib; import string; import datetime; import re; import version
 os.system("cls")
 time.sleep(1)
 inf = 1
@@ -30,9 +30,8 @@ def register_user(x, y):
   else:
     print("Error: Password cannot be the same as username!")
 USER1 = "users.txt"
-ver = "v 1.4.2"
 print("ROOT_TERMINAL_MODE")
-print(ver)
+version.VER()
 print("")
 print("Type in RETURN /terminal or QUIT to leave.")
 print("")
@@ -198,10 +197,10 @@ while inf < 2:
         print("Current time is:",TIME,"(UTC+1)")
         continue
     elif COMMAND_PROMPT == "VERSION":
-        print(ver)
+        version.VER()
         continue
     elif COMMAND_PROMPT == "version":
-        print(ver)
+        version.VER()
         continue
     elif "START" in COMMAND_PROMPT:
         if COMMAND_PROMPT.endswith("}"):
