@@ -2,7 +2,7 @@
 USERS /DIR = Shows all registered users.
 SHUTDOWN = Shuts down the DOS.
 USERS.REG /GUI = Opens the registration GUI.
-LOGOFF = Logs you off.
+LOGOFF = Logs off the current user.
 RESTART = Restarts the system.
 IMPORT THIS = A tiny easter egg.
 ROOT.run /TERMINAL = Starts the DOS with ROOT user.
