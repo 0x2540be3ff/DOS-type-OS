@@ -15,8 +15,9 @@ def register_user():
     os.system("start error_user.vbs")
     
     
-  else:
-    file=open(username_info, "w")
+  elif username_info != password_info:
+    user_ext1 = username_info+".u5r"
+    file=open(user_ext1, "w")
     file.write(username_info+"\n")
     file.write(password_info)
     file.close()
@@ -24,6 +25,8 @@ def register_user():
     file1.write(username_info+"\n")
     file1.close()
     os.system("start success.vbs")
+  else:
+    os.system("start error_same_pass.vbs")
   username_entry.delete(0, END)
   password_entry.delete(0, END)
 
@@ -80,7 +83,7 @@ def main_screen():
   Label(text = "", bg="#1a1c1b").pack()
   Label(text = "", bg="#1a1c1b").pack()
   Label(text = "", bg="#1a1c1b").pack()
-  Label(text = "© 2022", bg="#1a1c1b", fg="#ffffff").pack()
+  Label(text = "WARNING: Terminal will be restarted and you will be logged off.", bg="#1a1c1b", fg="#ffffff").pack()
   Label(screen, text = "register.GUI                                                                                                      v 1.0 ", fg="#ffffff", bg="#444444").pack()
   Label(text = "                                                                                                                                     ", bg="#444444").pack()
 
