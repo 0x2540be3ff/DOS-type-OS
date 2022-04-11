@@ -1,5 +1,5 @@
 # terminal.py
-import os; import time; import importlib; import string; import datetime; import re
+import os; import time; import importlib; import string; import datetime; import re; import version
 os.system("cls")
 time.sleep(0.5)
 def BLANK():
@@ -13,7 +13,6 @@ os.system("cls")
 os.system("title DOS")
 time.sleep(1)
 inf = 1
-ver = "v 1.4.2"
 USER1 = "users.txt"
 def doesFileExists(filePathAndName):
     return os.path.exists(filePathAndName)
@@ -44,7 +43,7 @@ def register_user(x, y):
 
 
 print("TERMINAL_MODE")
-print(ver)
+version.VER()
 time.sleep(1)
 BLANK()
 print("Login 🡺")
@@ -223,10 +222,10 @@ while inf < 2:
         print("Current time is:",TIME,"(UTC+1)")
         continue
     elif COMMAND_PROMPT == "VERSION":
-        print(ver)
+        version.VER()
         continue
     elif COMMAND_PROMPT == "version":
-        print(ver)
+        version.VER()
         continue
     elif "START" in COMMAND_PROMPT:
         if COMMAND_PROMPT.endswith("}"):
