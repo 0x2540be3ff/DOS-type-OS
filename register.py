@@ -84,7 +84,7 @@ def main_screen():
   Label(text = "", bg="#1a1c1b").pack()
   Label(text = "", bg="#1a1c1b").pack()
   Label(text = "WARNING: Terminal will be restarted and you will be logged off.", bg="#1a1c1b", fg="#ffffff").pack()
-  Label(screen, text = "register.GUI                                                                                                      v 1.0 ", fg="#ffffff", bg="#444444").pack()
+  Label(screen, text = "register.GUI                                                                                                      v 1.4.2 ", fg="#ffffff", bg="#444444").pack()
   Label(text = "                                                                                                                                     ", bg="#444444").pack()
 
   screen.mainloop()
