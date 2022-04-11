@@ -1,0 +1,20 @@
+------------------------------------------------------------
+USERS /DIR = Shows all registered users.
+SHUTDOWN = Shuts down the DOS.
+USERS.REG /GUI = Opens the registration GUI.
+LOGOFF = Logs you off.
+RESTART = Restarts the system.
+IMPORT THIS = A tiny easter egg.
+ROOT.run /TERMINAL = Starts the DOS with ROOT user.
+CLEAR = Clears the screen.
+HELP = Opens this window.
+DATE = Shows you the current date.
+TIME = Shows you the current time.
+VERSION = Shows you the DOS version.
+START {} = Executes a command in curly brackets.
+PRINT {} = Outputs the string in curly brackets.
+HOST.whoami = Shows the user that is currently logged in to the host machine.
+USERS.REG {user, pass} = Registers a new user.
+USERS.USERINFO {} = Shows all info from the user.
+READ {} = Reads the contents of the file.
+------------------------------------------------------------
