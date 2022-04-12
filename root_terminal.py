@@ -1,21 +1,12 @@
-# terminal.py
-import os; import time; import importlib; import string; import datetime; import re; import version
+# root.py
+import os; import time; import importlib; import string; import datetime; import re; import version; from lst_str import listToString; from blank import BLANK; from doesFileExist import doesFileExist
 os.system("cls")
 time.sleep(1)
 inf = 1
-def doesFileExists(filePathAndName):
-    return os.path.exists(filePathAndName)
-
-def listToString(x): 
-    
-    str1 = " " 
-    return (str1.join(x))
-        
-
 def register_user(x, y):
   username_info = x
   password_info = y
-  if doesFileExists(username_info):
+  if doesFileExist(username_info):
     print("User already exists!")
   elif username_info != password_info:
     usr = username_info+".u5r"
@@ -32,9 +23,9 @@ def register_user(x, y):
 USER1 = "users.txt"
 print("ROOT_TERMINAL_MODE")
 version.VER()
-print("")
+BLANK()
 print("Type in RETURN /terminal or QUIT to leave.")
-print("")
+BLANK()
 print("Please enter your password to access the terminal.")
 time.sleep(0.5)
 PASSWORD = input("Password: ")
@@ -320,7 +311,7 @@ while inf < 2:
         if COMMAND_PROMPT.endswith("}"):
             var = re.findall(r"\{(.*?)\}", COMMAND_PROMPT)
             y = listToString(var)
-            if doesFileExists(y):
+            if doesFileExist(y):
                 F = open(y, 'r')
                 INFO = F.read()
                 print(INFO)
@@ -336,7 +327,7 @@ while inf < 2:
         if COMMAND_PROMPT.endswith("}"):
             var = re.findall(r"\{(.*?)\}", COMMAND_PROMPT)
             y = listToString(var)
-            if doesFileExists(y):
+            if doesFileExist(y):
                 F = open(y, 'r')
                 INFO = F.read()
                 print(INFO)
@@ -352,7 +343,7 @@ while inf < 2:
         if COMMAND_PROMPT.endswith("}"):
             var = re.findall(r"\{(.*?)\}", COMMAND_PROMPT)
             y = listToString(var)
-            if doesFileExists(y):
+            if doesFileExist(y):
                 F = open(y, 'r')
                 INFO = F.read()
                 print(INFO)
@@ -368,7 +359,7 @@ while inf < 2:
         if COMMAND_PROMPT.endswith("}"):
             var = re.findall(r"\{(.*?)\}", COMMAND_PROMPT)
             y = listToString(var)
-            if doesFileExists(y):
+            if doesFileExist(y):
                 F = open(y, 'r')
                 INFO = F.read()
                 print(INFO)
@@ -384,7 +375,7 @@ while inf < 2:
         if COMMAND_PROMPT.endswith("}"):
             var = re.findall(r"\{(.*?)\}", COMMAND_PROMPT)
             y = listToString(var)
-            if doesFileExists(y):
+            if doesFileExist(y):
                 F = open(y, 'r')
                 READ = F.read()
                 print(READ)
@@ -396,6 +387,12 @@ while inf < 2:
         else:
             print("Input Error: Perhaps you forgot } ?")
             continue
+    elif "" in COMMAND_PROMPT:
+        if COMMAND_PROMPT.endswith("}"):
+            var = re.findall(r"\{(.*?)\}", COMMAND_PROMPT)
+            y = listToString(var)
     else:
         print("This command does not exist.")
         continue
+
+    
