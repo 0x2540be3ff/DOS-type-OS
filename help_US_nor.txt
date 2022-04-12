@@ -1,0 +1,25 @@
+------------------------------------------------------------
+USERS /DIR = Shows all registered users.
+SHUTDOWN = Shuts down the DOS.
+LOGOFF = Logs off the current user.
+RESTART = Restarts the system.
+IMPORT THIS = A tiny easter egg.
+ROOT.run /TERMINAL = Starts the DOS with ROOT user.
+CLEAR = Clears the screen.
+HELP = Opens this window.
+DATE = Shows you the current date.
+TIME = Shows you the current time.
+VERSION = Shows you the DOS version.
+START {} = Executes a command in curly brackets. ALT = EXECUTE {}
+PRINT {} = Outputs the string in curly brackets.
+FILE.READ {} = Reads the contents of the file.
+FILE.OPEN {} = Opens the file in notepad.
+FILE.OPEN.DOS {} = Opens the file and outputs in into DOS.
+FILE.EDIT {} [ext] = Edits the file.
+FILE.CLOSE {} = Closes the file.
+FILE.CHEXT {} [ext] = Changes the files extension.
+FILE.NEW {} [ext] = Creates a new file.
+FILE.RENAME {} = Renames the file.
+SAVE = Saves the file.
+DISCARD = Discards the file.
+------------------------------------------------------------
