@@ -1,9 +1,7 @@
 # terminal.py
-import os; import time; import importlib; import string; import datetime; import re; import version
+import os; import time; import importlib; import string; import datetime; import re; import version; from lst_str import listToString; from blank import BLANK; from doesFileExist import doesFileExist
 os.system("cls")
 time.sleep(0.5)
-def BLANK():
-    print("")
 print("DOS_START")
 time.sleep(0.5)
 BLANK()
@@ -13,20 +11,11 @@ os.system("cls")
 os.system("title DOS")
 time.sleep(1)
 inf = 1
-USER1 = "users.txt"
-def doesFileExists(filePathAndName):
-    return os.path.exists(filePathAndName)
-
-def listToString(x): 
-    
-    str1 = " " 
-    return (str1.join(x))
-        
-
+USER1 = "users.txt"     
 def register_user(x, y):
   username_info = x
   password_info = y
-  if doesFileExists(username_info):
+  if doesFileExist(username_info):
     print("User already exists!")
   elif username_info != password_info:
     usr = username_info+".u5r"
@@ -191,13 +180,13 @@ while inf < 2:
         import root_terminal
         quit(0)
     elif COMMAND_PROMPT == "help":
-        F = open('help_US.txt', 'r')
+        F = open('help_US_nor.txt', 'r')
         HELP = F.read()
         print(HELP)
         F.close()
         continue
     elif COMMAND_PROMPT == "HELP":
-        F = open('help_US.txt', 'r')
+        F = open('help_US_nor.txt', 'r')
         HELP = F.read()
         print(HELP)
         F.close()
@@ -227,102 +216,6 @@ while inf < 2:
     elif COMMAND_PROMPT == "version":
         version.VER()
         continue
-    elif "START" in COMMAND_PROMPT:
-        if COMMAND_PROMPT.endswith("}"):
-            var = re.findall(r"\{(.*?)\}", COMMAND_PROMPT)
-            y = listToString(var)
-            x = "start "+y
-            os.system(x)
-            continue 
-        else:
-            print("Input Error: Perhaps you forgot } ?")
-            continue
-    elif "start" in COMMAND_PROMPT:
-        if COMMAND_PROMPT.endswith("}"):
-            var = re.findall(r"\{(.*?)\}", COMMAND_PROMPT)
-            y = listToString(var)
-            x = "start "+y
-            os.system(x)
-            continue
-        else:
-            print("Input Error: Perhaps you forgot } ?")
-            continue
-    elif "users.reg" in COMMAND_PROMPT:
-        if COMMAND_PROMPT.endswith("}"):
-            var = re.findall(r"\{(.*?)\}", COMMAND_PROMPT)
-            y = listToString(var)
-            x = y.split(", ")
-            z, zz = x
-            user = str(z)
-            password = str(zz)
-            #print(user)
-            #print(password)
-            register_user(user, password)
-            continue
-        else:
-            print("Input Error: Perhaps you forgot } ?")
-            continue
-        continue
-    elif "USERS.reg" in COMMAND_PROMPT:
-        if COMMAND_PROMPT.endswith("}"):
-            var = re.findall(r"\{(.*?)\}", COMMAND_PROMPT)
-            y = listToString(var)
-            x = y.split(", ")
-            z, zz = x
-            user = str(z)
-            password = str(zz)
-            print(user)
-            print(password)
-            register_user(user, password)
-            continue
-        else:
-            print("Input Error: Perhaps you forgot } ?")
-            continue
-        continue
-    elif "users.REG" in COMMAND_PROMPT:
-        if COMMAND_PROMPT.endswith("}"):
-            var = re.findall(r"\{(.*?)\}", COMMAND_PROMPT)
-            y = listToString(var)
-            x = y.split(", ")
-            z, zz = x
-            user = str(z)
-            password = str(zz)
-            print(user)
-            print(password)
-            register_user(user, password)
-            continue
-        else:
-            print("Input Error: Perhaps you forgot } ?")
-            continue
-        continue
-    elif "USERS.REG" in COMMAND_PROMPT:
-        if COMMAND_PROMPT.endswith("}"):
-            var = re.findall(r"\{(.*?)\}", COMMAND_PROMPT)
-            y = listToString(var)
-            x = y.split(", ")
-            z, zz = x
-            user = str(z)
-            password = str(zz)
-            print(user)
-            print(password)
-            register_user(user, password)
-            continue
-        else:
-            print("Input Error: Perhaps you forgot } ?")
-            continue
-        continue
-    elif COMMAND_PROMPT == "HOST.WHOAMI":
-        os.system("whoami")
-        continue
-    elif COMMAND_PROMPT == "host.WHOAMI":
-        os.system("whoami")
-        continue
-    elif COMMAND_PROMPT == "HOST.whoami":
-        os.system("whoami")
-        continue
-    elif COMMAND_PROMPT == "host.whoami":
-        os.system("whoami")
-        continue
     elif "PRINT" in COMMAND_PROMPT:
         if COMMAND_PROMPT.endswith("}"):
             var = re.findall(r"\{(.*?)\}", COMMAND_PROMPT)
@@ -341,75 +234,11 @@ while inf < 2:
         else:
             print("Input Error: Perhaps you forgot } ?")
             continue
-    elif "users.userinfo" in COMMAND_PROMPT:
+    elif "FILE.READ" in COMMAND_PROMPT:
         if COMMAND_PROMPT.endswith("}"):
             var = re.findall(r"\{(.*?)\}", COMMAND_PROMPT)
             y = listToString(var)
-            if doesFileExists(y):
-                F = open(y, 'r')
-                INFO = F.read()
-                print(INFO)
-                F.close()
-                continue
-            else:
-                print("User does not exist.")
-                continue
-        else:
-            print("Input Error: Perhaps you forgot } ?")
-            continue
-    elif "USERS.userinfo" in COMMAND_PROMPT:
-        if COMMAND_PROMPT.endswith("}"):
-            var = re.findall(r"\{(.*?)\}", COMMAND_PROMPT)
-            y = listToString(var)
-            if doesFileExists(y):
-                F = open(y, 'r')
-                INFO = F.read()
-                print(INFO)
-                F.close()
-                continue
-            else:
-                print("User does not exist.")
-                continue
-        else:
-            print("Input Error: Perhaps you forgot } ?")
-            continue
-    elif "users.USERINFO" in COMMAND_PROMPT:
-        if COMMAND_PROMPT.endswith("}"):
-            var = re.findall(r"\{(.*?)\}", COMMAND_PROMPT)
-            y = listToString(var)
-            if doesFileExists(y):
-                F = open(y, 'r')
-                INFO = F.read()
-                print(INFO)
-                F.close()
-                continue
-            else:
-                print("User does not exist.")
-                continue
-        else:
-            print("Input Error: Perhaps you forgot } ?")
-            continue
-    elif "USERS.USERINFO" in COMMAND_PROMPT:
-        if COMMAND_PROMPT.endswith("}"):
-            var = re.findall(r"\{(.*?)\}", COMMAND_PROMPT)
-            y = listToString(var)
-            if doesFileExists(y):
-                F = open(y, 'r')
-                INFO = F.read()
-                print(INFO)
-                F.close()
-                continue
-            else:
-                print("User does not exist.")
-                continue
-        else:
-            print("Input Error: Perhaps you forgot } ?")
-            continue
-    elif "READ" in COMMAND_PROMPT:
-        if COMMAND_PROMPT.endswith("}"):
-            var = re.findall(r"\{(.*?)\}", COMMAND_PROMPT)
-            y = listToString(var)
-            if doesFileExists(y):
+            if doesFileExist(y):
                 F = open(y, 'r')
                 READ = F.read()
                 print(READ)
