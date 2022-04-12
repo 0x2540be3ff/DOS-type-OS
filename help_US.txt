@@ -11,10 +11,24 @@ HELP = Opens this window.
 DATE = Shows you the current date.
 TIME = Shows you the current time.
 VERSION = Shows you the DOS version.
-START {} = Executes a command in curly brackets.
+START {} = Executes a command in curly brackets. ALT = EXECUTE {}
 PRINT {} = Outputs the string in curly brackets.
 HOST.whoami = Shows the user that is currently logged in to the host machine.
 USERS.REG {user, pass} = Registers a new user.
 USERS.USERINFO {} = Shows all info from the user.
-READ {} = Reads the contents of the file.
+FILE.READ {} = Reads the contents of the file.
+FILE.OPEN {} = Opens the file in notepad.
+FILE.OPEN.DOS {} = Opens the file and outputs in into DOS.
+FILE.EDIT {} [ext] = Edits the file.
+FILE.CLOSE {} = Closes the file.
+FILE.CHEXT {} [ext] = Changes the files extension.
+FILE.NEW {} [ext] = Creates a new file.
+FILE.REMOVE {} = Removes/Deletes the file.
+FILE.RENAME {} = Renames the file.
+SAVE = Saves the file.
+DISCARD = Discards the file.
+USERS.REMOVE {} = Removes the user.
+USERS.CHP {x, y} = Changes the users password.
+USERS.CHUS {x, y} = Changes the users username.
+ROOT.debug /TERMINAL = Reboots the Terminal in DEBUG mode.
 ------------------------------------------------------------
