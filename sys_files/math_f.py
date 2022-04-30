@@ -1,5 +1,7 @@
 import math; import random
 def ADD(x, y):
+    int(x)
+    int(y)
     a = x + y
     return a
 def SUB(x, y):
@@ -10,6 +12,15 @@ def MUL(x, y):
     return a
 def DIV(x, y):
     a = x / y
+    return a
+def SQR(x):
+    a = x ** 2
+    return a
+def SQRT(x):
+    a = math.sqrt(x)
+    return a
+def NEG(x):
+    a = x - x * 2
     return a
 def FLR(x):
     a = math.floor(x)
@@ -56,8 +67,8 @@ def TANH(x):
 def COMB(x, y):
     a = math.comb(x, y)
     return a
-def POW(x):
-    a = math.pow(x)
+def POW(x, y):
+    a = math.pow(x, y)
     return a
 def LOG(x):
     a = math.log(x)
@@ -66,7 +77,7 @@ def LOG10(x):
     a = math.log10(x)
     return a
 def LOG1P(x):
-    a = math.log10ps(x)
+    a = math.log1p(x)
     return a
 def COPY(x, y):
     a = math.copysign(x, y)
