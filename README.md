@@ -1,2 +1,2 @@
 # DOS-type-OS
-A school project that I have due Tuesday :/
+A tiny project I'm currently working on.
