@@ -1,5 +1,5 @@
-from tkinter import * #broken lmao
-import os; import time
+from tkinter import *
+import os; import time; import sys;
 
 os.system("cls")
 
@@ -10,8 +10,9 @@ def doesFileExists(filePathAndName):
   
 def register_user():
   username_info = username.get()
+  aa = username_info+".u5r"
   password_info = password.get()
-  if doesFileExists(username_info):
+  if doesFileExists(aa):
     os.system("start error_user.vbs")
     
     
@@ -44,7 +45,7 @@ def register():
   global password_entry
   username = StringVar()
   password = StringVar()
-  register_btn1 = PhotoImage(file="register.png")
+  register_btn1 = PhotoImage(file="./sys_files/register1.png")
   Label(screen1, text = "Register", bg = "lightblue", width = "300", height = "2", font = ("Segoe UI Light", 13)).pack()
   Label(screen1, text = "Please enter details below:", fg="#ffffff", bg="#1a1c1b").pack()
   Label(screen1, text = "", fg="#ffffff", bg="#1a1c1b").pack()
@@ -61,7 +62,7 @@ def register():
 
 def TERMINAL_MODE():
   screen.destroy()
-  import run_terminal
+  import boot  
   
 def main_screen():
   global screen
@@ -69,9 +70,9 @@ def main_screen():
   screen.geometry("400x350")
   screen.resizable(False, False)
   screen.configure(bg="#1a1c1b")
-  screen.title("Register v1.0")
-  register_btn = PhotoImage(file="register.png")
-  terminal_btn = PhotoImage(file="terminal.png")
+  screen.title("Register v1.4.2")
+  register_btn = PhotoImage(file="./sys_files/register1.png")
+  terminal_btn = PhotoImage(file="./sys_files/terminal1.png")
   Label(text = "Welcome", bg = "lightblue", width = "300", height = "2", font = ("Segoe UI Light", 13)).pack()
   Label(text = "", bg="#1a1c1b").pack()
   Label(text = "Options 🡺", bg="#1a1c1b", fg="#ffffff", font = ("Segoe UI Light", 11)).pack()
@@ -84,7 +85,7 @@ def main_screen():
   Label(text = "", bg="#1a1c1b").pack()
   Label(text = "", bg="#1a1c1b").pack()
   Label(text = "WARNING: Terminal will be restarted and you will be logged off.", bg="#1a1c1b", fg="#ffffff").pack()
-  Label(screen, text = "register.GUI                                                                                                      v 1.4.2 ", fg="#ffffff", bg="#444444").pack()
+  Label(screen, text = "Register                                                                                                          v 1.4.2 ", fg="#ffffff", bg="#444444").pack()
   Label(text = "                                                                                                                                     ", bg="#444444").pack()
 
   screen.mainloop()
