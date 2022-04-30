@@ -1,5 +1,5 @@
 # root.py
-import os; import time; import importlib; import string; import datetime; import re; import version; from lst_str import listToString; from blank import BLANK; from doesFileExist import doesFileExist
+import os; import time; import importlib; import string; import datetime; import re; import version; from lst_str import listToString; from blank import BLANK; from doesFileExist import doesFileExist; from file_write import WRITE;
 os.system("cls")
 time.sleep(1)
 inf = 1
@@ -21,7 +21,7 @@ def register_user(x, y):
   else:
     print("Error: Password cannot be the same as username!")
 USER1 = "users.txt"
-print("ROOT_TERMINAL_MODE")
+print("ROOT_MODE")
 version.VER()
 BLANK()
 print("Type in RETURN /terminal or QUIT to leave.")
@@ -95,6 +95,10 @@ while inf < 2:
             print(USER_DIR)
             USER_LIST.close()
         continue
+    elif COMMAND_PROMPT == "USERS.REG /GUI":
+        os.system("cls")
+        os.system("py register.py")
+        quit(0)
     elif COMMAND_PROMPT == "SHUTDOWN":
         print("Shutting down...")
         time.sleep(0.8)
@@ -371,7 +375,7 @@ while inf < 2:
         else:
             print("Input Error: Perhaps you forgot } ?")
             continue
-    elif "READ" in COMMAND_PROMPT:
+    elif "FILE.READ" in COMMAND_PROMPT:
         if COMMAND_PROMPT.endswith("}"):
             var = re.findall(r"\{(.*?)\}", COMMAND_PROMPT)
             y = listToString(var)
@@ -387,10 +391,169 @@ while inf < 2:
         else:
             print("Input Error: Perhaps you forgot } ?")
             continue
-    elif "" in COMMAND_PROMPT:
+    elif "file.READ" in COMMAND_PROMPT:
         if COMMAND_PROMPT.endswith("}"):
             var = re.findall(r"\{(.*?)\}", COMMAND_PROMPT)
             y = listToString(var)
+            if doesFileExist(y):
+                F = open(y, 'r')
+                READ = F.read()
+                print(READ)
+                F.close()
+                continue
+            else:
+                print("File does not exist.")
+                continue
+        else:
+            print("Input Error: Perhaps you forgot } ?")
+            continue
+    elif "FILE.read" in COMMAND_PROMPT:
+        if COMMAND_PROMPT.endswith("}"):
+            var = re.findall(r"\{(.*?)\}", COMMAND_PROMPT)
+            y = listToString(var)
+            if doesFileExist(y):
+                F = open(y, 'r')
+                READ = F.read()
+                print(READ)
+                F.close()
+                continue
+            else:
+                print("File does not exist.")
+                continue
+        else:
+            print("Input Error: Perhaps you forgot } ?")
+            continue
+    elif "file.read" in COMMAND_PROMPT:
+        if COMMAND_PROMPT.endswith("}"):
+            var = re.findall(r"\{(.*?)\}", COMMAND_PROMPT)
+            y = listToString(var)
+            if doesFileExist(y):
+                F = open(y, 'r')
+                READ = F.read()
+                print(READ)
+                F.close()
+                continue
+            else:
+                print("File does not exist.")
+                continue
+        else:
+            print("Input Error: Perhaps you forgot } ?")
+            continue
+    elif "FILE.OPEN" in COMMAND_PROMPT:
+        if COMMAND_PROMPT.endswith("}"):
+            var = re.findall(r"\{(.*?)\}", COMMAND_PROMPT)
+            y = listToString(var)
+            if doesFileExist(y):
+                a = "notepad "+y
+                #print(a)
+                os.system(a)
+            else:
+                print("File does not exist.")
+        else:
+            print("Input Error: Perhaps you forgot } ?")
+    elif "file.OPEN" in COMMAND_PROMPT:
+        if COMMAND_PROMPT.endswith("}"):
+            var = re.findall(r"\{(.*?)\}", COMMAND_PROMPT)
+            y = listToString(var)
+            if doesFileExist(y):
+                a = "notepad "+y
+                #print(a)
+                os.system(a)
+            else:
+                print("File does not exist.")
+        else:
+            print("Input Error: Perhaps you forgot } ?")
+    elif "FILE.open" in COMMAND_PROMPT:
+        if COMMAND_PROMPT.endswith("}"):
+            var = re.findall(r"\{(.*?)\}", COMMAND_PROMPT)
+            y = listToString(var)
+            if doesFileExist(y):
+                a = "notepad "+y
+                #print(a)
+                os.system(a)
+            else:
+                print("File does not exist.")
+        else:
+            print("Input Error: Perhaps you forgot } ?")
+    elif "file.open" in COMMAND_PROMPT:
+        if COMMAND_PROMPT.endswith("}"):
+            var = re.findall(r"\{(.*?)\}", COMMAND_PROMPT)
+            y = listToString(var)
+            if doesFileExist(y):
+                a = "notepad "+y
+                #print(a)
+                os.system(a)
+            else:
+                print("File does not exist.")
+        else:
+            print("Input Error: Perhaps you forgot } ?")
+    elif "FILE.WRITE" in COMMAND_PROMPT:
+        if COMMAND_PROMPT.endswith("}"):
+            var = re.findall(r"\{(.*?)\}", COMMAND_PROMPT)
+            y = listToString(var)
+            x = y.split(", ")
+            z, zz = x
+            file = str(z)
+            text = str(zz)
+            #print(file)
+            print(text)
+            WRITE(file, text)
+            continue
+        else:
+            print("Input Error: Perhaps you forgot } ?")
+    elif "file.WRITE" in COMMAND_PROMPT:
+        if COMMAND_PROMPT.endswith("}"):
+            var = re.findall(r"\{(.*?)\}", COMMAND_PROMPT)
+            y = listToString(var)
+            x = y.split(", ")
+            z, zz = x
+            file = str(z)
+            text = str(zz)
+            #print(file)
+            print(text)
+            WRITE(file, text)
+            continue
+        else:
+            print("Input Error: Perhaps you forgot } ?")
+    elif "FILE.write" in COMMAND_PROMPT:
+        if COMMAND_PROMPT.endswith("}"):
+            var = re.findall(r"\{(.*?)\}", COMMAND_PROMPT)
+            y = listToString(var)
+            x = y.split(", ")
+            z, zz = x
+            file = str(z)
+            text = str(zz)
+            #print(file)
+            print(text)
+            WRITE(file, text)
+            continue
+        else:
+            print("Input Error: Perhaps you forgot } ?")
+    elif "file.write" in COMMAND_PROMPT:
+        if COMMAND_PROMPT.endswith("}"):
+            var = re.findall(r"\{(.*?)\}", COMMAND_PROMPT)
+            y = listToString(var)
+            x = y.split(", ")
+            z, zz = x
+            file = str(z)
+            text = str(zz)
+            #print(file)
+            print(text)
+            WRITE(file, text)
+            continue
+        else:
+            print("Input Error: Perhaps you forgot } ?")
+    elif "FILE.CHEXT" in COMMAND_PROMPT:
+        if COMMAND_PROMPT.endswith("}"):
+            var = re.findall(r"\{(.*?)\}", COMMAND_PROMPT)
+            y = listToString(var)
+            x = y.split(", ")
+            z, zz = x
+            file = str(z)
+            ext = str(zz)
+            continue
+        else:
+            print("Input Error: Perhaps you forgot } ?")
     else:
         print("This command does not exist.")
         continue
