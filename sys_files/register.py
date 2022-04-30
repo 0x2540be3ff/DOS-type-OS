@@ -1,4 +1,4 @@
-from tkinter import *
+from tkinter import * #broken lmao
 import os; import time
 
 os.system("cls")
