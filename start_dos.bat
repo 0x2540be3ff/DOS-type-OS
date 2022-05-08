@@ -1,6 +1,7 @@
 :: don't worry it's not a virus
 @echo off
-cd sys_files
 ::mode 800
-python boot_dos.py %*
+::color f0 ;light mode
+cd sys_files
+python kernel_start.py %*
 cmd /k
