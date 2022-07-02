@@ -1,5 +1,5 @@
 # root.py
-import os; import time; import importlib; import string; import datetime; import re; import version; from lst_str import listToString; from blank import BLANK; from doesFileExist import doesFileExist; from file_write import WRITE;
+import os; import time; import importlib; import string; import datetime; import re; import version; from lst_str import listToString; from blank import BLANK; from doesFileExist import doesFileExist;
 os.system("cls")
 time.sleep(1)
 inf = 1
