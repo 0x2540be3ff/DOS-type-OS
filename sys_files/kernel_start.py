@@ -1,2 +1,2 @@
-import kernel
+import boot_dos
 quit(0)
